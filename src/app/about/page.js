@@ -1,5 +1,9 @@
-import FadeIn from 'components/animations/FadeIn';
-import Container from 'components/ui/Container';
+import FadeIn from "components/animations/FadeIn";
+import { BentoGrid } from "components/ui/BentoGrid";
+import Container from "components/ui/Container";
+import MagneticButton from "components/ui/MagneticButton";
+import SpotlightCard from "components/ui/SpotlightCard";
+import Link from "next/link";
 
 export const metadata = {
     title: 'About | Muntasir Mahmud',
@@ -8,119 +12,102 @@ export const metadata = {
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen py-20">
+        <main className="min-h-screen py-32 bg-background relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-secondary/10 blur-[150px] rounded-full pointer-events-none" />
+
             <Container>
                 {/* Header */}
                 <FadeIn>
-                    <h1 className="text-5xl font-bold mb-6">About Me</h1>
-                    <p className="text-xl text-base-content/70 mb-12 max-w-3xl">
-                        A Water Resources Engineer turned Full-Stack Developer, building technology solutions with purpose and impact.
+                    <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 text-white">
+                        About <span className="text-primary">Me</span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-base-content/70 mb-16 max-w-3xl leading-relaxed">
+                        A Water Resources Engineer turned Full-Stack Developer, combining systems thinking with creative coding to build <span className="text-white">impactful digital experiences</span>.
                     </p>
                 </FadeIn>
 
-                {/* My Story */}
-                <section className="mb-16">
-                    <FadeIn delay={0.1}>
-                        <h2 className="text-3xl font-bold mb-6">My Story</h2>
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-base-content/80 mb-4">
-                                My journey into web development started from an unexpected place: <strong>Water Resources Engineering</strong> at CUET.
-                                While studying infrastructure, hydrology, and sustainable systems, I discovered a passion for solving complex problems—not just with physical infrastructure, but with code.
+                <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem] mb-20">
+                    {/* Story Block - Large */}
+                    <div className="md:col-span-2 md:row-span-2 rounded-xl p-8 md:p-12 border border-white/10 bg-base-200/50 backdrop-blur-sm shadow-xl relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <h2 className="text-3xl font-bold font-heading mb-6 text-white relative z-10">The Journey</h2>
+                        <div className="space-y-4 text-base-content/80 relative z-10 text-lg leading-relaxed">
+                            <p>
+                                My path wasn't linear. It started at <strong>CUET</strong>, studying Water Resources Engineering. While modeling hydrology and infrastructure, I discovered that the logic used to solve physical problems applies perfectly to digital ones.
                             </p>
-                            <p className="text-base-content/80 mb-4">
-                                What began as curiosity about programming quickly evolved into a deep commitment to mastering the <strong>MERN stack</strong>.
-                                Over the past 6 months, I've worked on real-world projects during my internship, building everything from e-commerce platforms
-                                to data management systems. Each project taught me not just about React, Node.js, or MongoDB, but about discipline,
-                                problem-solving, and the importance of writing clean, maintainable code.
+                            <p>
+                                What started as a curiosity about programming quickly evolved into a passion for the <strong>MERN stack</strong>. Over the last 6 months, I've dived deep into building real-world applications, translating complex engineering principles into clean, efficient code.
                             </p>
-                            <p className="text-base-content/80">
-                                Today, I stand at the intersection of two worlds: engineering systems and engineering software.
-                                My goal is to use technology to address critical challenges—especially in water resource management, sustainability,
-                                and infrastructure—across Bangladesh and the Gulf region.
+                            <p>
+                                Today, I bridge the gap between hard engineering and software development, aiming to solve critical challenges in sustainability and infrastructure through technology.
                             </p>
                         </div>
-                    </FadeIn>
-                </section>
+                    </div>
 
-                {/* Why I Do This Work */}
-                <section className="mb-16 bg-base-200 p-8 rounded-lg">
-                    <FadeIn delay={0.2}>
-                        <h2 className="text-3xl font-bold mb-6">Why I Do This Work</h2>
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-base-content/80 mb-4">
-                                Beyond the code and the challenge, I'm driven by a deeper purpose: using technology to create <strong>meaningful, sustainable impact</strong>.
-                            </p>
-                            <p className="text-base-content/80 mb-4">
-                                My background in Water Resources Engineering taught me to think systemically—to see the interconnectedness of infrastructure,
-                                communities, and resources. Now, I apply that same systems thinking to web development, building tools that serve real people
-                                and solve real problems.
-                            </p>
-                            <p className="text-base-content/80">
-                                I'm guided by principles of <strong>integrity, discipline, and service</strong>. Whether it's optimizing a user experience,
-                                improving accessibility, or contributing to open-source, I aim to leave things better than I found them. My long-term vision
-                                is to bridge technology and water resource challenges—using AI and modern web platforms to improve sustainability, access,
-                                and resilience.
-                            </p>
-                        </div>
-                    </FadeIn>
-                </section>
+                    {/* Stats/Quick Info */}
+                    <SpotlightCard className="p-8 flex flex-col justify-center items-center text-center bg-base-200/30">
+                        <div className="text-5xl font-bold text-primary mb-2">CUET</div>
+                        <div className="text-sm uppercase tracking-widest text-base-content/60">Alma Mater</div>
+                    </SpotlightCard>
 
-                {/* Experience Snapshot */}
-                <section className="mb-16">
-                    <FadeIn delay={0.3}>
-                        <h2 className="text-3xl font-bold mb-6">Experience Snapshot</h2>
-                        <div className="space-y-4">
-                            <div className="border-l-4 border-primary pl-6">
-                                <h3 className="text-xl font-semibold">Full-Stack Developer Intern</h3>
-                                <p className="text-base-content/70">6-Month Internship (5 months completed)</p>
-                                <p className="text-base-content/80 mt-2">
-                                    Working on real-world MERN stack projects including e-commerce platforms, inventory management systems,
-                                    and customer-facing web applications. Gained hands-on experience in full development lifecycle from
-                                    planning to deployment.
-                                </p>
+                    <SpotlightCard className="p-8 flex flex-col justify-center items-center text-center bg-base-200/30">
+
+                        <div className="text-5xl font-bold text-secondary mb-2">6+</div>
+                        <div className="text-sm uppercase tracking-widest text-base-content/60">Months Exp</div>
+                    </SpotlightCard>
+
+                    {/* Values */}
+                    <div className="md:col-span-2 p-8 rounded-xl border border-white/10 bg-base-200/30 backdrop-blur-sm">
+                        <h3 className="text-xl font-bold font-heading mb-6 text-white">Core Values</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div>
+                                <h4 className="text-primary font-bold mb-2">Systems Thinking</h4>
+                                <p className="text-sm text-base-content/70">Seeing the big picture and how components interact.</p>
                             </div>
-
-                            <div className="border-l-4 border-primary pl-6">
-                                <h3 className="text-xl font-semibold">Water Resources Engineering Student</h3>
-                                <p className="text-base-content/70">CUET</p>
-                                <p className="text-base-content/80 mt-2">
-                                    Studying infrastructure systems, hydrology, and sustainable resource management.
-                                    Interested in applying AI and programming to water-related challenges in Bangladesh and Gulf countries.
-                                </p>
+                            <div>
+                                <h4 className="text-primary font-bold mb-2">Impact First</h4>
+                                <p className="text-sm text-base-content/70">Building technology that solves real human problems.</p>
+                            </div>
+                            <div>
+                                <h4 className="text-primary font-bold mb-2">Continuous Growth</h4>
+                                <p className="text-sm text-base-content/70">Always learning, adapting, and refining my craft.</p>
                             </div>
                         </div>
-                    </FadeIn>
-                </section>
+                    </div>
+                </BentoGrid>
 
-                {/* What's Next */}
-                <section>
-                    <FadeIn delay={0.4}>
-                        <h2 className="text-3xl font-bold mb-6">What's Next</h2>
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-base-content/80 mb-4">
-                                I'm currently in my final year at CUET, balancing my studies with real-world development work.
-                                My immediate goal is to transition fully into IT and web development while building a sustainable income through
-                                freelance and remote opportunities.
-                            </p>
-                            <p className="text-base-content/80 mb-4">
-                                Long-term, I'm passionate about the <strong>intersection of technology and water resource management</strong>—exploring
-                                how AI, data platforms, and modern web tools can address critical infrastructure challenges in Bangladesh and Gulf countries.
-                            </p>
-
-                            <h3 className="font-semibold text-lg mb-2">I'm open to:</h3>
-                            <ul className="list-disc list-inside space-y-2 text-base-content/80">
-                                <li>Remote full-stack developer roles</li>
-                                <li>Freelance projects (MERN stack, Next.js, frontend)</li>
-                                <li>Collaborations on impact-driven tech initiatives</li>
-                                <li>Research partnerships in water tech + AI</li>
-                            </ul>
-
-                            <p className="text-base-content/80 mt-6">
-                                <strong>Let's build something meaningful together.</strong>
+                {/* Experience Section */}
+                <FadeIn delay={0.2}>
+                    <h2 className="text-3xl font-bold font-heading mb-12 text-white border-l-4 border-primary pl-4">Experience Timeline</h2>
+                    <div className="space-y-12 border-l border-white/10 ml-2 md:ml-4 pl-8 md:pl-12 relative">
+                        <div className="relative">
+                            <div className="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full bg-primary border-4 border-background" />
+                            <h3 className="text-2xl font-bold text-white">Full-Stack Developer Intern</h3>
+                            <div className="text-primary font-mono text-sm mb-4">Present • 6 Month Internship</div>
+                            <p className="text-base-content/70 max-w-2xl text-lg">
+                                Developing comprehensive web applications using the MERN stack. specialized in building e-commerce platforms and inventory management systems. Gaining mastery in React hooks, Node.js APIs, and MongoDB aggregation.
                             </p>
                         </div>
-                    </FadeIn>
-                </section>
+
+                        <div className="relative">
+                            <div className="absolute -left-[41px] md:-left-[57px] top-1 h-5 w-5 rounded-full bg-base-content/20 border-4 border-background" />
+                            <h3 className="text-2xl font-bold text-white">Water Resources Engineering Student</h3>
+                            <div className="text-base-content/50 font-mono text-sm mb-4">CUET</div>
+                            <p className="text-base-content/70 max-w-2xl text-lg">
+                                Rigorous training in fluid mechanics, hydrology, and environmental engineering. Developed strong analytical and mathematical modeling skills that I now apply to algorithm design and backend logic.
+                            </p>
+                        </div>
+                    </div>
+                </FadeIn>
+
+                <div className="mt-24 text-center">
+                    <h3 className="text-2xl font-bold mb-8 text-white">Ready to build something amazing?</h3>
+                    <Link href="/contact">
+                        <MagneticButton className="btn btn-primary btn-lg rounded-full px-12">
+                            Let's Talk
+                        </MagneticButton>
+                    </Link>
+                </div>
             </Container>
         </main>
     );

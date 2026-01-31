@@ -1,9 +1,19 @@
 import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
-import { Inter } from 'next/font/google';
+import { Outfit, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({
+    subsets: ['latin'],
+    variable: '--font-outfit',
+    display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+    subsets: ['latin'],
+    variable: '--font-space-grotesk',
+    display: 'swap',
+});
 
 export const metadata = {
     title: 'Muntasir Mahmud | Full-Stack Developer',
@@ -36,8 +46,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={inter.className}>
-            <body className="antialiased">
+        <html lang="en" className={`${outfit.variable} ${spaceGrotesk.variable}`} data-theme="dark">
+            <body className="antialiased bg-background text-base-content selection:bg-primary selection:text-black">
                 <Header />
                 {children}
                 <Footer />
