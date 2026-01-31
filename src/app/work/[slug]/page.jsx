@@ -3,6 +3,7 @@ import Badge from "components/ui/Badge";
 import Button from "components/ui/Button";
 import Container from "components/ui/Container";
 import { getAllProjects, getProjectBySlug } from "lib/projects";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -15,8 +16,10 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for each project
+// Generate metadata for each project
 export async function generateMetadata({ params }) {
-  const project = getProjectBySlug(params.slug);
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     return {
@@ -35,8 +38,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ProjectPage({ params }) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectPage({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
@@ -54,9 +58,19 @@ export default function ProjectPage({ params }) {
             ← Back to All Projects
           </Link>
           <h1 className="text-5xl font-bold mb-4">{project.title}</h1>
-          <p className="text-xl text-base-content/70 mb-6">
+          <p className="text-xl text-base-content/70 mb-8">
             {project.description}
           </p>
+
+          <div className="relative w-full h-64 md:h-96 mb-12 rounded-xl overflow-hidden shadow-2xl">
+              <Image 
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+                priority
+              />
+          </div>
         </FadeIn>
 
         {/* Project Overview */}

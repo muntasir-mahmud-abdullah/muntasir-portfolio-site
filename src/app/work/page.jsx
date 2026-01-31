@@ -5,6 +5,7 @@ import Badge from "components/ui/Badge";
 import Card, { CardBody, CardTitle } from "components/ui/Card";
 import Container from "components/ui/Container";
 import { getAllProjects } from "lib/projects";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -50,9 +51,12 @@ export default function WorkPage() {
             <FadeIn key={project.id} delay={index * 0.1}>
               <Card>
                 <figure className="relative h-48 bg-base-300">
-                  <div className="w-full h-full flex items-center justify-center text-base-content/30">
-                    <p className="text-sm">Project Screenshot</p>
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
                 </figure>
 
                 <CardBody>

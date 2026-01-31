@@ -4,6 +4,7 @@ import Button from "components/ui/Button";
 import Card, { CardBody, CardTitle } from "components/ui/Card";
 import Container from "components/ui/Container";
 import { getFeaturedProjects } from "lib/projects";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function FeaturedProjects() {
@@ -26,17 +27,12 @@ export default function FeaturedProjects() {
             <FadeIn key={project.id} delay={index * 0.1}>
               <Card>
                 <figure className="relative h-64 bg-base-300">
-                  {/* Placeholder for project image */}
-                  <div className="w-full h-full flex items-center justify-center text-base-content/30">
-                    <p className="text-sm">Project Screenshot</p>
-                  </div>
-                  {/* Uncomment when you have images */}
-                  {/* <Image
+                  <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover"
-                  /> */}
+                  />
                 </figure>
 
                 <CardBody>
