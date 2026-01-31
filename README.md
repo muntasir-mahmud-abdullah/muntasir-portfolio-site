@@ -102,6 +102,6 @@ MIT
 
 Muntasir Mahmud - Full-Stack Developer
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [yourprofile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@muntasir-mahmud-abdullah](https://github.com/muntasir-mahmud-abdullah)
+- LinkedIn: [muntasir-mahmud-abdullah47](https://www.linkedin.com/in/muntasir-mahmud-abdullah47)
+- Email: muntasirm525@gmail.com

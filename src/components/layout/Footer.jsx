@@ -4,14 +4,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "GitHub", href: "https://github.com/yourusername", icon: "📦" },
+    { name: "GitHub", href: "https://github.com/muntasir-mahmud-abdullah", icon: "📦" },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://www.linkedin.com/in/muntasir-mahmud-abdullah47",
       icon: "💼",
     },
     { name: "Twitter", href: "https://twitter.com/yourusername", icon: "🐦" },
-    { name: "Email", href: "mailto:your.email@example.com", icon: "✉️" },
+    { name: "Email", href: "mailto:muntasirm525@gmail.com", icon: "✉️" },
   ];
 
   return (

@@ -99,7 +99,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className="input input-bordered w-full"
                     required
-                    placeholder="your.email@example.com"
+                    placeholder="muntasirm525@gmail.com"
                   />
                 </div>
 
@@ -147,7 +147,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:muntasirm525@gmail.com"
                     className="text-primary hover:underline"
                   >
                     muntasirm525@gmail.com
@@ -157,7 +157,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-2">LinkedIn</h3>
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/muntasir-mahmud-abdullah47"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"

@@ -9,7 +9,7 @@ export const projects = [
         tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS'],
         category: 'Full-Stack',
         liveLink: 'https://demo.example.com',
-        githubLink: 'https://github.com/yourusername/project',
+        githubLink: 'https://github.com/muntasir-mahmud-abdullah',
         featured: true,
     },
     {
@@ -21,7 +21,7 @@ export const projects = [
         tech: ['Next.js', 'MongoDB', 'Chart.js', 'Node.js'],
         category: 'Full-Stack',
         liveLink: 'https://water-demo.example.com',
-        githubLink: 'https://github.com/yourusername/water-project',
+        githubLink: 'https://github.com/muntasir-mahmud-abdullah',
         featured: true,
     },
     {
@@ -33,7 +33,7 @@ export const projects = [
         tech: ['React', 'Firebase', 'Tailwind CSS', 'Framer Motion'],
         category: 'Frontend',
         liveLink: 'https://tasks-demo.example.com',
-        githubLink: 'https://github.com/yourusername/tasks',
+        githubLink: 'https://github.com/muntasir-mahmud-abdullah',
         featured: true,
     },
     {
@@ -45,7 +45,7 @@ export const projects = [
         tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'DaisyUI'],
         category: 'Frontend',
         liveLink: 'https://yoursite.com',
-        githubLink: 'https://github.com/yourusername/portfolio',
+        githubLink: 'https://github.com/muntasir-mahmud-abdullah',
         featured: false,
     },
 ];
