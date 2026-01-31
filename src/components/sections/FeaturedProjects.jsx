@@ -1,10 +1,10 @@
-import FadeIn from '@/components/animations/FadeIn';
-import Badge from '@/components/ui/Badge';
-import Button from '@/components/ui/Button';
-import Card, { CardBody, CardTitle } from '@/components/ui/Card';
-import Container from '@/components/ui/Container';
-import { getFeaturedProjects } from '@/lib/projects';
-import Link from 'next/link';
+import FadeIn from "components/animations/FadeIn";
+import Badge from "components/ui/Badge";
+import Button from "components/ui/Button";
+import Card, { CardBody, CardTitle } from "components/ui/Card";
+import Container from "components/ui/Container";
+import { getFeaturedProjects } from "lib/projects";
+import Link from "next/link";
 
 export default function FeaturedProjects() {
   const featuredProjects = getFeaturedProjects();
@@ -15,8 +15,9 @@ export default function FeaturedProjects() {
         <FadeIn>
           <h2 className="text-4xl font-bold text-center mb-4">Featured Work</h2>
           <p className="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-            A selection of projects that demonstrate my skills in full-stack development,
-            problem-solving, and creating impactful web applications.
+            A selection of projects that demonstrate my skills in full-stack
+            development, problem-solving, and creating impactful web
+            applications.
           </p>
         </FadeIn>
 

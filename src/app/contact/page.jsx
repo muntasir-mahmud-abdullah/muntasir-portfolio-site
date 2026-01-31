@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import FadeIn from '@/components/animations/FadeIn';
-import Button from '@/components/ui/Button';
-import Container from '@/components/ui/Container';
-import { useState } from 'react';
+import FadeIn from "components/animations/FadeIn";
+import Button from "components/ui/Button";
+import Container from "components/ui/Container";
+import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
-  const [status, setStatus] = useState({ type: '', message: '' });
+  const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -21,25 +21,35 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus({ type: '', message: '' });
+    setStatus({ type: "", message: "" });
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        setStatus({ type: 'success', message: 'Message sent successfully! I\'ll get back to you within 24 hours.' });
-        setFormData({ name: '', email: '', message: '' });
+        setStatus({
+          type: "success",
+          message:
+            "Message sent successfully! I'll get back to you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus({ type: 'error', message: data.error || 'Something went wrong. Please try again.' });
+        setStatus({
+          type: "error",
+          message: data.error || "Something went wrong. Please try again.",
+        });
       }
     } catch (error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      setStatus({
+        type: "error",
+        message: "Failed to send message. Please try again.",
+      });
     } finally {
       setLoading(false);
     }
@@ -51,8 +61,8 @@ export default function ContactPage() {
         <FadeIn>
           <h1 className="text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl text-base-content/70 mb-12 max-w-3xl">
-            Have a project in mind, a question, or just want to connect? I'd love to hear from you.
-            I typically respond within 24 hours.
+            Have a project in mind, a question, or just want to connect? I'd
+            love to hear from you. I typically respond within 24 hours.
           </p>
         </FadeIn>
 
@@ -61,7 +71,7 @@ export default function ContactPage() {
           <FadeIn delay={0.1}>
             <div className="bg-base-200 p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="form-control">
                   <label className="label">
@@ -108,7 +118,9 @@ export default function ContactPage() {
                 </div>
 
                 {status.message && (
-                  <div className={`alert ${status.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+                  <div
+                    className={`alert ${status.type === "success" ? "alert-success" : "alert-error"}`}
+                  >
                     {status.message}
                   </div>
                 )}
@@ -120,7 +132,7 @@ export default function ContactPage() {
                   className="w-full"
                   disabled={loading}
                 >
-                  {loading ? 'Sending...' : 'Send Message'}
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
@@ -130,57 +142,61 @@ export default function ContactPage() {
           <FadeIn delay={0.2}>
             <div>
               <h2 className="text-2xl font-bold mb-6">Other Ways to Connect</h2>
-              
+
               <div className="space-y-6">
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:your.email@example.com" className="text-primary hover:underline">
-                    your.email@example.com
+                  <a
+                    href="mailto:your.email@example.com"
+                    className="text-primary hover:underline"
+                  >
+                    muntasirm525@gmail.com
                   </a>
                 </div>
 
                 <div>
                   <h3 className="font-semibold mb-2">LinkedIn</h3>
-                  <a 
-                    href="https://linkedin.com/in/yourprofile" 
-                    target="_blank" 
+                  <a
+                    href="https://linkedin.com/in/yourprofile"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    linkedin.com/in/yourprofile
+                    https://www.linkedin.com/in/muntasir-mahmud-abdullah47
                   </a>
                 </div>
 
                 <div>
                   <h3 className="font-semibold mb-2">GitHub</h3>
-                  <a 
-                    href="https://github.com/yourusername" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/muntasir-mahmud-abdullah"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    github.com/yourusername
+                    github.com/muntasir-mahmud-abdullah
                   </a>
                 </div>
 
-                <div>
+                {/* <div>
                   <h3 className="font-semibold mb-2">Twitter/X</h3>
-                  <a 
-                    href="https://twitter.com/yourusername" 
-                    target="_blank" 
+                  <a
+                    href="https://twitter.com/yourusername"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
                     @yourusername
                   </a>
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-8 p-6 bg-base-200 rounded-lg">
                 <h3 className="font-semibold mb-2">Response Time</h3>
                 <p className="text-base-content/70">
-                  I typically respond to inquiries within <strong>24 hours</strong> during weekdays.
-                  If you don't hear back, please feel free to send a follow-up message.
+                  I typically respond to inquiries within{" "}
+                  <strong>24 hours</strong> during weekdays. If you don't hear
+                  back, please feel free to send a follow-up message.
                 </p>
               </div>
 

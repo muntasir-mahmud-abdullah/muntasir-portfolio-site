@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import { useState } from 'react';
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Work', href: '/work' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Work", href: "/work" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -19,8 +19,11 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold hover:text-primary transition-colors">
-            [Your Name]
+          <Link
+            href="/"
+            className="text-xl font-bold hover:text-primary transition-colors"
+          >
+            Muntasir Mahmud
           </Link>
 
           {/* Desktop Navigation */}

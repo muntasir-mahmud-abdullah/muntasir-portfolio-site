@@ -1,6 +1,6 @@
-import FeaturedProjects from '@/components/sections/FeaturedProjects';
-import Hero from '@/components/sections/Hero';
-import TechStack from '@/components/sections/TechStack';
+import FeaturedProjects from "components/sections/FeaturedProjects";
+import Hero from "components/sections/Hero";
+import TechStack from "components/sections/TechStack";
 
 export default function HomePage() {
     return (

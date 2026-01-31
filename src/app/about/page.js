@@ -1,8 +1,8 @@
-import FadeIn from '@/components/animations/FadeIn';
-import Container from '@/components/ui/Container';
+import FadeIn from 'components/animations/FadeIn';
+import Container from 'components/ui/Container';
 
 export const metadata = {
-    title: 'About | [Your Name]',
+    title: 'About | Muntasir Mahmud',
     description: 'Learn about my journey from Water Resources Engineering to Full-Stack Development.',
 };
 

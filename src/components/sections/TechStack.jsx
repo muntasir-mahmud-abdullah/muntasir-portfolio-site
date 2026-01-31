@@ -1,6 +1,6 @@
-import FadeIn from '@/components/animations/FadeIn';
-import Badge from '@/components/ui/Badge';
-import Container from '@/components/ui/Container';
+import FadeIn from "components/animations/FadeIn";
+import Badge from "components/ui/Badge";
+import Container from "components/ui/Container";
 
 export default function TechStack() {
   const techStack = {

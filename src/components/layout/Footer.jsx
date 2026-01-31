@@ -1,13 +1,17 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/yourusername', icon: '📦' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile', icon: '💼' },
-    { name: 'Twitter', href: 'https://twitter.com/yourusername', icon: '🐦' },
-    { name: 'Email', href: 'mailto:your.email@example.com', icon: '✉️' },
+    { name: "GitHub", href: "https://github.com/yourusername", icon: "📦" },
+    {
+      name: "LinkedIn",
+      href: "https://linkedin.com/in/yourprofile",
+      icon: "💼",
+    },
+    { name: "Twitter", href: "https://twitter.com/yourusername", icon: "🐦" },
+    { name: "Email", href: "mailto:your.email@example.com", icon: "✉️" },
   ];
 
   return (
@@ -16,9 +20,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4">[Your Name]</h3>
+            <h3 className="text-xl font-bold mb-4">Muntasir Mahmud</h3>
             <p className="text-base-content/70">
-              Full-Stack Developer building scalable web applications for impact.
+              Full-Stack Developer building scalable web applications for
+              impact.
             </p>
           </div>
 
@@ -26,10 +31,38 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-base-content/70 hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-base-content/70 hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/work" className="text-base-content/70 hover:text-primary transition-colors">Work</Link></li>
-              <li><Link href="/contact" className="text-base-content/70 hover:text-primary transition-colors">Contact</Link></li>
+              <li>
+                <Link
+                  href="/"
+                  className="text-base-content/70 hover:text-primary transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-base-content/70 hover:text-primary transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/work"
+                  className="text-base-content/70 hover:text-primary transition-colors"
+                >
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-base-content/70 hover:text-primary transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -54,7 +87,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-base-300 mt-8 pt-8 text-center text-base-content/60">
-          <p>&copy; {currentYear} [Your Name]. Built with Next.js and Tailwind CSS.</p>
+          <p>
+            &copy; {currentYear} Muntasir Mahmud. Built with Next.js and
+            Tailwind CSS.
+          </p>
         </div>
       </div>
     </footer>

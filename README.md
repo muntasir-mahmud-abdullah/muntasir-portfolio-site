@@ -43,7 +43,7 @@ src/
 │   ├── work/            # Projects listing and case studies
 │   ├── contact/         # Contact page with form
 │   ├── api/contact/     # Contact form API route
-│   ├── layout.js        # Root layout 
+│   ├── layout.js        # Root layout
 │   ├── page.js          # Homepage
 │   ├── sitemap.js       # SEO sitemap
 │   └── robots.js        # Robots.txt
@@ -58,7 +58,7 @@ src/
 
 ## 🎨 Customization
 
-1. **Personal Information**: Replace `[Your Name]` throughout the codebase
+1. **Personal Information**: Replace `Muntasir Mahmud` throughout the codebase
 2. **Projects**: Update `src/lib/projects.js` with your real projects
 3. **Images**: Add project screenshots to `/public/images/projects/`
 4. **Social Links**: Update links in `src/components/layout/Footer.jsx` and `src/components/layout/Header.jsx`
@@ -70,11 +70,13 @@ src/
 To enable the contact form:
 
 1. Install Resend (or your preferred email service):
+
    ```bash
    npm install resend
    ```
 
 2. Add API key to `.env.local`:
+
    ```
    RESEND_API_KEY=your_api_key_here
    ```
@@ -98,7 +100,7 @@ MIT
 
 ## 👤 Author
 
-[Your Name] - Full-Stack Developer
+Muntasir Mahmud - Full-Stack Developer
 
 - GitHub: [@yourusername](https://github.com/yourusername)
 - LinkedIn: [yourprofile](https://linkedin.com/in/yourprofile)

@@ -1,22 +1,21 @@
-'use client';
+"use client";
 
-import FadeIn from '@/components/animations/FadeIn';
-import Badge from '@/components/ui/Badge';
-import Card, { CardBody, CardTitle } from '@/components/ui/Card';
-import Container from '@/components/ui/Container';
-import { getAllProjects } from '@/lib/projects';
-import Link from 'next/link';
-import { useState } from 'react';
+import FadeIn from "components/animations/FadeIn";
+import Badge from "components/ui/Badge";
+import Card, { CardBody, CardTitle } from "components/ui/Card";
+import Container from "components/ui/Container";
+import { getAllProjects } from "lib/projects";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function WorkPage() {
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState("All");
   const projects = getAllProjects();
-  
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
 
-  const categories = ['All', 'Full-Stack', 'Frontend', 'Backend'];
+  const filteredProjects =
+    filter === "All" ? projects : projects.filter((p) => p.category === filter);
+
+  const categories = ["All", "Full-Stack", "Frontend", "Backend"];
 
   return (
     <main className="min-h-screen py-20">
@@ -24,8 +23,9 @@ export default function WorkPage() {
         <FadeIn>
           <h1 className="text-5xl font-bold mb-6">My Work</h1>
           <p className="text-xl text-base-content/70 mb-12 max-w-3xl">
-            A collection of projects showcasing my full-stack development skills,
-            problem-solving abilities, and passion for creating impactful web applications.
+            A collection of projects showcasing my full-stack development
+            skills, problem-solving abilities, and passion for creating
+            impactful web applications.
           </p>
         </FadeIn>
 
@@ -36,7 +36,7 @@ export default function WorkPage() {
               <button
                 key={category}
                 onClick={() => setFilter(category)}
-                className={`btn ${filter === category ? 'btn-primary' : 'btn-outline'}`}
+                className={`btn ${filter === category ? "btn-primary" : "btn-outline"}`}
               >
                 {category}
               </button>
@@ -68,12 +68,17 @@ export default function WorkPage() {
                       </Badge>
                     ))}
                     {project.tech.length > 3 && (
-                      <Badge variant="default">+{project.tech.length - 3}</Badge>
+                      <Badge variant="default">
+                        +{project.tech.length - 3}
+                      </Badge>
                     )}
                   </div>
 
                   <div className="card-actions justify-between items-center">
-                    <Link href={`/work/${project.slug}`} className="btn btn-ghost btn-sm">
+                    <Link
+                      href={`/work/${project.slug}`}
+                      className="btn btn-ghost btn-sm"
+                    >
                       View Case Study →
                     </Link>
                   </div>

@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import FadeIn from '@/components/animations/FadeIn';
-import Button from '@/components/ui/Button';
-import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
+import FadeIn from "components/animations/FadeIn";
+import Button from "components/ui/Button";
+import Link from "next/link";
 
 export default function Hero() {
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              Hi, I'm <span className="text-primary">[Your Name]</span> 👋
+              Hi, I'm <span className="text-primary">Muntasir Mahmud</span> 👋
             </h1>
           </FadeIn>
 
@@ -28,18 +28,15 @@ export default function Hero() {
 
           <FadeIn delay={0.4}>
             <p className="text-lg sm:text-xl text-base-content/70 max-w-3xl mx-auto mb-8">
-              I create fast, accessible, and beautiful web applications using the MERN stack.
-              From water resource tech to modern e-commerce, I solve real-world problems with code.
+              I create fast, accessible, and beautiful web applications using
+              the MERN stack. From water resource tech to modern e-commerce, I
+              solve real-world problems with code.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.6}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                variant="primary" 
-                size="lg"
-                onClick={scrollToProjects}
-              >
+              <Button variant="primary" size="lg" onClick={scrollToProjects}>
                 View My Work
               </Button>
               <Link href="/contact">

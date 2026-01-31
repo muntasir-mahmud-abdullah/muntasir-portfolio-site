@@ -1,26 +1,26 @@
-import Footer from '@/components/layout/Footer';
-import Header from '@/components/layout/Header';
+import Footer from 'components/layout/Footer';
+import Header from 'components/layout/Header';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: '[Your Name] | Full-Stack Developer',
+    title: 'Muntasir Mahmud | Full-Stack Developer',
     description: 'MERN stack developer with Water Resources Engineering background, building scalable web applications for impact.',
     keywords: ['Full-Stack Developer', 'MERN Stack', 'React', 'Node.js', 'Next.js', 'Web Development'],
-    authors: [{ name: '[Your Name]' }],
+    authors: [{ name: 'Muntasir Mahmud' }],
     openGraph: {
-        title: '[Your Name] | Full-Stack Developer',
+        title: 'Muntasir Mahmud | Full-Stack Developer',
         description: 'MERN stack developer building scalable web applications',
         url: 'https://yoursite.com',
-        siteName: '[Your Name] Portfolio',
+        siteName: 'Muntasir Mahmud Portfolio',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: '[Your Name] Portfolio',
+                alt: 'Muntasir Mahmud Portfolio',
             },
         ],
         locale: 'en_US',
@@ -28,7 +28,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '[Your Name] | Full-Stack Developer',
+        title: 'Muntasir Mahmud | Full-Stack Developer',
         description: 'MERN stack developer building scalable web applications',
         images: ['/og-image.png'],
     },
