@@ -87,8 +87,8 @@ export default async function ProjectPage({ params }) {
 
                 <div className="flex flex-wrap gap-4 mt-10">
                     {project.liveLink && (
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                             <MagneticButton className="btn btn-primary btn-lg rounded-full px-8 text-black border-none gap-2">
+                        <a href={project?.liveLink} target="_blank" rel="noopener noreferrer">
+                             <MagneticButton className="btn btn-primary btn-lg rounded-full px-8 text-white border-none gap-2">
                                 <GlobeAltIcon className="h-5 w-5" /> Visit Live Site
                              </MagneticButton>
                         </a>
@@ -109,41 +109,52 @@ export default async function ProjectPage({ params }) {
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 py-20">
              {/* Main Content */}
              <div className="lg:col-span-2 space-y-20">
-                 <FadeIn delay={0.2}>
+                <FadeIn delay={0.2}>
                     <section className="prose prose-xl prose-invert max-w-none prose-headings:font-heading prose-headings:text-white prose-p:text-base-content/70 prose-a:text-primary">
-                        <h2>The Challenge</h2>
-                        <p>
-                           [Describe the challenge or opportunity this project addressed.
-                           What was the gap, need, or pain point? Who was affected, and why
-                           did this matter?]
-                        </p>
+                        {project.challenge && (
+                            <>
+                                <h2>The Challenge</h2>
+                                <p>{project.challenge}</p>
+                            </>
+                        )}
                         
-                        <h2>My Solution</h2>
-                         <p>
-                           [Explain your strategic thinking before diving into tech. How did
-                           you break down the problem? What were the key technical decisions?
-                           Why did you choose this tech stack?]
-                        </p>
+                        {project.solution && (
+                            <>
+                                <h2>My Solution</h2>
+                                <p>{project.solution}</p>
+                            </>
+                        )}
 
-                        <h3>Key Features</h3>
-                        <ul>
-                          <li><strong>Real-time Updates</strong>: Leveraging WebSockets for instant data reflection.</li>
-                          <li><strong>Optimized Performance</strong>: Achieving 95+ Lifecycle scores through code splitting.</li>
-                          <li><strong>Secure Auth</strong>: Implementation of JWT and role-based access control.</li>
-                        </ul>
+                        {project.keyFeatures && project.keyFeatures.length > 0 && (
+                            <>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    {project.keyFeatures.map((feature, index) => (
+                                        <li key={index}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </>
+                        )}
                     </section>
                  </FadeIn>
 
-                 <FadeIn delay={0.4}>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                         {[1, 2].map(i => (
-                             <div key={i} className="h-64 bg-base-200/50 rounded-xl border border-white/5 flex items-center justify-center relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <span className="text-base-content/30 italic">Detailed Screenshot {i}</span>
-                             </div>
-                         ))}
-                     </div>
-                 </FadeIn>
+                 {project.screenshots && project.screenshots.length > 0 && (
+                     <FadeIn delay={0.4}>
+                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             {project.screenshots.map((screenshot, index) => (
+                                 <div key={index} className="h-64 bg-base-200/50 rounded-xl border border-white/5 flex items-center justify-center relative overflow-hidden group">
+                                     <Image
+                                         src={screenshot}
+                                         alt={`Screenshot ${index + 1}`}
+                                         fill
+                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                     />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                                 </div>
+                             ))}
+                         </div>
+                     </FadeIn>
+                 )}
              </div>
 
              {/* Sidebar Info */}
@@ -155,14 +166,18 @@ export default async function ProjectPage({ params }) {
                         </h3>
                         
                         <div className="space-y-6">
-                            <div>
-                                <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-1">Role</h4>
-                                <div className="text-white font-medium">Full-Stack Developer</div>
-                            </div>
-                            <div>
-                                <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-1">Timeline</h4>
-                                <div className="text-white font-medium">4 Weeks</div>
-                            </div>
+                            {project.role && (
+                                <div>
+                                    <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-1">Role</h4>
+                                    <div className="text-white font-medium">{project.role}</div>
+                                </div>
+                            )}
+                            {project.timeline && (
+                                <div>
+                                    <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-1">Timeline</h4>
+                                    <div className="text-white font-medium">{project.timeline}</div>
+                                </div>
+                            )}
                             <div>
                                 <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-1">Tech Stack</h4>
                                 <div className="flex flex-wrap gap-2 mt-2">
@@ -175,12 +190,14 @@ export default async function ProjectPage({ params }) {
                             </div>
                         </div>
 
-                        <div className="mt-8 pt-8 border-t border-white/10">
-                            <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-3">Key Outcome</h4>
-                            <p className="text-emerald-400 italic">
-                                "Reduced data processing time by 40% using optimized algorithms."
-                            </p>
-                        </div>
+                        {project.keyOutcome && (
+                            <div className="mt-8 pt-8 border-t border-white/10">
+                                <h4 className="text-sm uppercase tracking-wider text-base-content/50 mb-3">Key Outcome</h4>
+                                <p className="text-emerald-400 italic">
+                                    "{project.keyOutcome}"
+                                </p>
+                            </div>
+                        )}
                      </SpotlightCard>
                  </FadeIn>
              </div>
