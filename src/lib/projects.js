@@ -5,7 +5,7 @@ export const projects = [
         "slug": "shopera-sports-ecommerce",
         "title": "Shopera — MERN E-Commerce (Production-Ready)",
         "description": "Full-stack MERN e-commerce platform focused on production constraints: secure auth, server-side role checks, serverless-safe media uploads, robust admin controls, search, filtering, pagination, and order workflows.",
-        "image": "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+E-Commerce+Dashboard",
+        "image": "/public/images/projects/shopera1.png",
         "tech": [
             "React",
             "Tailwind CSS",
@@ -41,9 +41,9 @@ export const projects = [
         "timeline": "Iterative (multiple sprints) — initial 16-hour roadmap extended with additional feature sprints (search, pagination, Cloudinary refactor, admin flows)",
         "keyOutcome": "Production-ready e-commerce foundation: serverless-safe media handling, secure server-side authorization, improved UX (search/pagination/trending), and maintainable admin controls. Ready for branding as a sports storefront with minimal theming work.",
         "screenshots": [
-            "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+Dashboard",
-            "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+Products",
-            "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+Admin+Orders"
+            "/public/images/projects/shopera2.png",
+            "/public/images/projects/shopera3.png",
+            "/public/images/projects/shopera4.png",
         ]
     },
 
@@ -52,7 +52,7 @@ export const projects = [
         "slug": "learnify-tutor-platform",
         "title": "Learnify — Tutor Booking & Tutorial Management (MERN)",
         "description": "A full-stack tutor discovery and booking platform that lets students find language tutors, book live sessions, and lets tutors publish & manage tutorials. Focuses on secure auth (Firebase + JWT), resilient user provisioning, clear role-based flows, and a polished responsive UI built with Tailwind + DaisyUI.",
-        "image": "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Tutor+Platform",
+        "image": "/public/images/projects/learnify1.png",
         "tech": [
             "React (Vite)",
             "Tailwind CSS",
@@ -88,57 +88,56 @@ export const projects = [
         "timeline": "Iterative sprints — MVP (authentication, listings, booking) in initial sprint; follow-ups added profile upsert, JWT middleware, retry logic, and UX polish across multiple short sprints.",
         "keyOutcome": "A production-ready tutor booking foundation that reliably handles social sign-ins, protects API routes with server-side JWTs, and provides a polished, responsive frontend UX. Edge cases (first-time social users, duplicate bookings, deployed cookie behavior) were identified and resolved, improving stability in both local and deployed environments.",
         "screenshots": [
-            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Hero",
-            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Find+Tutors",
-            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Tutor+Details",
-            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Dashboard"
+            "/public/images/projects/learnify2.png",
+            "/public/images/projects/learnify3.png",
+            "/public/images/projects/learnify4.png",
         ]
     },
-    {
-        "id": 3,
-        "slug": "employee-management-system",
-        "title": "Employee Management System — Role-Based HR & Payroll Platform",
-        "description": "A production-style employee management platform with role-based dashboards (Admin, HR, Employee), secure authentication, payroll workflows, task tracking, and responsive UI with dark mode support.",
-        "image": "https://placehold.co/1200x800/0c1222/818cf8?text=Employee+Management+System",
-        "tech": [
-            "React",
-            "React Router",
-            "Tailwind CSS",
-            "DaisyUI",
-            "Firebase Authentication",
-            "JWT",
-            "Axios",
-            "TanStack Query",
-            "Node.js",
-            "Express",
-            "MongoDB (Native Driver)",
-            "SweetAlert2",
-            "React Toastify",
-            "Vercel"
-        ],
-        "category": "Full-Stack",
-        "liveLink": "https://employee-management-4bde3.web.app",
-        "githubLink": "https://github.com/muntasir-mahmud-abdullah/employee-management-client",
-        "featured": true,
-        "challenge": "Designing a real-world HR system with strict role separation, secure payroll actions, disabled-account enforcement, and a professional dashboard UX that scales across devices and supports dark mode.",
-        "solution": "Implemented Firebase authentication with JWT-protected APIs and role-based route guards to ensure secure access control. Built separate dashboards for Admin, HR, and Employees with tailored permissions. Added payroll workflows with verification, payment history, and duplicate-prevention logic. Designed a responsive, dark-mode-compatible UI using Tailwind and DaisyUI, enhanced with alerts and toasts for professional UX feedback.",
-        "keyFeatures": [
-            "Role-based dashboards for Admin, HR, and Employee with protected routing",
-            "Employee task management with date, hours, edit/delete actions, and real-time updates",
-            "Payroll system with HR verification, admin approval, and payment history tracking",
-            "Admin controls: role assignment, salary updates (increase-only), and account disable (fire)",
-            "Secure authentication with Firebase + JWT and Google OAuth support",
-            "Responsive, dark-mode-enabled UI with professional alerts and feedback"
-        ],
-        "role": "Full-Stack Developer",
-        "timeline": "Dec 2024 – Feb 2025 (iterative feature-driven development)",
-        "keyOutcome": "A recruiter-ready, production-style HR & payroll system demonstrating real-world authorization logic, clean dashboard UX, and scalable frontend architecture suitable for professional frontend roles.",
-        "screenshots": [
-            "https://placehold.co/1200x800/0c1222/818cf8?text=Employee+Dashboard",
-            "https://placehold.co/1200x800/0c1222/818cf8?text=Admin+Dashboard",
-            "https://placehold.co/1200x800/0c1222/818cf8?text=HR+Dashboard"
-        ]
-    },
+    // {
+    //     "id": 3,
+    //     "slug": "employee-management-system",
+    //     "title": "Employee Management System — Role-Based HR & Payroll Platform",
+    //     "description": "A production-style employee management platform with role-based dashboards (Admin, HR, Employee), secure authentication, payroll workflows, task tracking, and responsive UI with dark mode support.",
+    //     "image": "https://placehold.co/1200x800/0c1222/818cf8?text=Employee+Management+System",
+    //     "tech": [
+    //         "React",
+    //         "React Router",
+    //         "Tailwind CSS",
+    //         "DaisyUI",
+    //         "Firebase Authentication",
+    //         "JWT",
+    //         "Axios",
+    //         "TanStack Query",
+    //         "Node.js",
+    //         "Express",
+    //         "MongoDB (Native Driver)",
+    //         "SweetAlert2",
+    //         "React Toastify",
+    //         "Vercel"
+    //     ],
+    //     "category": "Full-Stack",
+    //     "liveLink": "https://employee-management-4bde3.web.app",
+    //     "githubLink": "https://github.com/muntasir-mahmud-abdullah/employee-management-client",
+    //     "featured": true,
+    //     "challenge": "Designing a real-world HR system with strict role separation, secure payroll actions, disabled-account enforcement, and a professional dashboard UX that scales across devices and supports dark mode.",
+    //     "solution": "Implemented Firebase authentication with JWT-protected APIs and role-based route guards to ensure secure access control. Built separate dashboards for Admin, HR, and Employees with tailored permissions. Added payroll workflows with verification, payment history, and duplicate-prevention logic. Designed a responsive, dark-mode-compatible UI using Tailwind and DaisyUI, enhanced with alerts and toasts for professional UX feedback.",
+    //     "keyFeatures": [
+    //         "Role-based dashboards for Admin, HR, and Employee with protected routing",
+    //         "Employee task management with date, hours, edit/delete actions, and real-time updates",
+    //         "Payroll system with HR verification, admin approval, and payment history tracking",
+    //         "Admin controls: role assignment, salary updates (increase-only), and account disable (fire)",
+    //         "Secure authentication with Firebase + JWT and Google OAuth support",
+    //         "Responsive, dark-mode-enabled UI with professional alerts and feedback"
+    //     ],
+    //     "role": "Full-Stack Developer",
+    //     "timeline": "Dec 2024 – Feb 2025 (iterative feature-driven development)",
+    //     "keyOutcome": "A recruiter-ready, production-style HR & payroll system demonstrating real-world authorization logic, clean dashboard UX, and scalable frontend architecture suitable for professional frontend roles.",
+    //     "screenshots": [
+    //         "https://placehold.co/1200x800/0c1222/818cf8?text=Employee+Dashboard",
+    //         "https://placehold.co/1200x800/0c1222/818cf8?text=Admin+Dashboard",
+    //         "https://placehold.co/1200x800/0c1222/818cf8?text=HR+Dashboard"
+    //     ]
+    // },
 ];
 
 export function getAllProjects() {
