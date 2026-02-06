@@ -5,7 +5,7 @@ export const projects = [
         "slug": "shopera-sports-ecommerce",
         "title": "Shopera — MERN E-Commerce (Production-Ready)",
         "description": "Full-stack MERN e-commerce platform focused on production constraints: secure auth, server-side role checks, serverless-safe media uploads, robust admin controls, search, filtering, pagination, and order workflows.",
-        "image": "/public/images/projects/shopera1.png",
+        "image": "/images/projects/shopera1.png",
         "tech": [
             "React",
             "Tailwind CSS",
@@ -41,9 +41,9 @@ export const projects = [
         "timeline": "Iterative (multiple sprints) — initial 16-hour roadmap extended with additional feature sprints (search, pagination, Cloudinary refactor, admin flows)",
         "keyOutcome": "Production-ready e-commerce foundation: serverless-safe media handling, secure server-side authorization, improved UX (search/pagination/trending), and maintainable admin controls. Ready for branding as a sports storefront with minimal theming work.",
         "screenshots": [
-            "/public/images/projects/shopera2.png",
-            "/public/images/projects/shopera3.png",
-            "/public/images/projects/shopera4.png",
+            "/images/projects/shopera2.png",
+            "/images/projects/shopera3.png",
+            "/images/projects/shopera4.png",
         ]
     },
 
@@ -52,7 +52,7 @@ export const projects = [
         "slug": "learnify-tutor-platform",
         "title": "Learnify — Tutor Booking & Tutorial Management (MERN)",
         "description": "A full-stack tutor discovery and booking platform that lets students find language tutors, book live sessions, and lets tutors publish & manage tutorials. Focuses on secure auth (Firebase + JWT), resilient user provisioning, clear role-based flows, and a polished responsive UI built with Tailwind + DaisyUI.",
-        "image": "/public/images/projects/learnify1.png",
+        "image": "/images/projects/learnify1.png",
         "tech": [
             "React (Vite)",
             "Tailwind CSS",
@@ -88,9 +88,9 @@ export const projects = [
         "timeline": "Iterative sprints — MVP (authentication, listings, booking) in initial sprint; follow-ups added profile upsert, JWT middleware, retry logic, and UX polish across multiple short sprints.",
         "keyOutcome": "A production-ready tutor booking foundation that reliably handles social sign-ins, protects API routes with server-side JWTs, and provides a polished, responsive frontend UX. Edge cases (first-time social users, duplicate bookings, deployed cookie behavior) were identified and resolved, improving stability in both local and deployed environments.",
         "screenshots": [
-            "/public/images/projects/learnify2.png",
-            "/public/images/projects/learnify3.png",
-            "/public/images/projects/learnify4.png",
+            "/images/projects/learnify2.png",
+            "/images/projects/learnify3.png",
+            "/images/projects/learnify4.png",
         ]
     },
     // {
