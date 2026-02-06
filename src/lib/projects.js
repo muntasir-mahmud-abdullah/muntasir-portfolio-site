@@ -5,7 +5,7 @@ export const projects = [
         "slug": "shopera-sports-ecommerce",
         "title": "Shopera — MERN E-Commerce (Production-Ready)",
         "description": "Full-stack MERN e-commerce platform focused on production constraints: secure auth, server-side role checks, serverless-safe media uploads, robust admin controls, search, filtering, pagination, and order workflows.",
-        "image": "/images/projects/ecommerce-dashboard.png",
+        "image": "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+E-Commerce+Dashboard",
         "tech": [
             "React",
             "Tailwind CSS",
@@ -20,8 +20,8 @@ export const projects = [
             "Vercel"
         ],
         "category": "Full-Stack",
-        "liveLink": "https://shopera-client.vercel.app",
-        "githubLink": "https://github.com/muntasir-mahmud-abdullah/ecommerce-script-mern",
+        "liveLink": "https://shopera-ecommerce-client.vercel.app",
+        "githubLink": "https://github.com/muntasir-mahmud-abdullah/ecommerce-mern",
         "featured": true,
         "challenge": "Make a real-world e-commerce app that works reliably in serverless deployments (Vercel), handles media safely, enforces server-side auth/authorization, and scales UX features (search, pagination) without compromising security or deployability.",
         "solution": "Built a production-oriented MERN architecture with Firebase for identity and server-side token verification for authorization. Replaced local file uploads with Multer (memory) → stream → Cloudinary to avoid disk usage and CORS problems. Added server-side guards (isAdmin, ban checks), robust error handling for uploads and auth, and URL-driven search + server pagination so front-end state is shareable/bookmarkable. Implemented `purchaseCount` to drive a Trending section and cleaned up image lifecycle by storing `public_id` and deleting old images on update/delete.",
@@ -41,9 +41,9 @@ export const projects = [
         "timeline": "Iterative (multiple sprints) — initial 16-hour roadmap extended with additional feature sprints (search, pagination, Cloudinary refactor, admin flows)",
         "keyOutcome": "Production-ready e-commerce foundation: serverless-safe media handling, secure server-side authorization, improved UX (search/pagination/trending), and maintainable admin controls. Ready for branding as a sports storefront with minimal theming work.",
         "screenshots": [
-            "/images/projects/ecommerce-dashboard.png",
-            "/images/projects/ecommerce-products.png",
-            "/images/projects/ecommerce-admin-orders.png"
+            "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+Dashboard",
+            "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+Products",
+            "https://placehold.co/1200x800/1e293b/38bdf8?text=Shopera+Admin+Orders"
         ]
     },
 
@@ -52,7 +52,7 @@ export const projects = [
         "slug": "learnify-tutor-platform",
         "title": "Learnify — Tutor Booking & Tutorial Management (MERN)",
         "description": "A full-stack tutor discovery and booking platform that lets students find language tutors, book live sessions, and lets tutors publish & manage tutorials. Focuses on secure auth (Firebase + JWT), resilient user provisioning, clear role-based flows, and a polished responsive UI built with Tailwind + DaisyUI.",
-        "image": "/images/projects/learnify-banner.png",
+        "image": "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Tutor+Platform",
         "tech": [
             "React (Vite)",
             "Tailwind CSS",
@@ -67,8 +67,8 @@ export const projects = [
             "React Router"
         ],
         "category": "Full-Stack / Frontend-First",
-        "liveLink": "https://learnify-client.example.com",
-        "githubLink": "https://github.com/your-username/learnify",
+        "liveLink": "https://learnify-5acd7.web.app",
+        "githubLink": "https://github.com/muntasir-mahmud-abdullah/learnify-client",
         "featured": true,
         "challenge": "Make authentication and user provisioning reliable across Firebase and a custom backend: first-time Google users must get a MongoDB profile, protected routes must validate server-issued JWT cookies, and the frontend must gracefully handle timing/race conditions between sign-in and backend writes. Also ensure a consistent, responsive UI and safe server-side guards.",
         "solution": "Used Firebase for identity and issued server-side JWTs (HTTP-only cookies) for API access. Implemented backend upsert logic for `/register` to guarantee user documents for first-time Google sign-ins. On the frontend added robust fetch logic with a single retry for `/user-profile` to avoid transient 404s. Created a JWT verification middleware in Express to protect routes and used `withCredentials` + correct CORS config to make cookies work in deployment. Kept UI consistent with Tailwind + DaisyUI, added Framer Motion for micro-interactions, and centralized auth state via context.",
@@ -88,10 +88,10 @@ export const projects = [
         "timeline": "Iterative sprints — MVP (authentication, listings, booking) in initial sprint; follow-ups added profile upsert, JWT middleware, retry logic, and UX polish across multiple short sprints.",
         "keyOutcome": "A production-ready tutor booking foundation that reliably handles social sign-ins, protects API routes with server-side JWTs, and provides a polished, responsive frontend UX. Edge cases (first-time social users, duplicate bookings, deployed cookie behavior) were identified and resolved, improving stability in both local and deployed environments.",
         "screenshots": [
-            "/images/projects/learnify-hero.png",
-            "/images/projects/learnify-find-tutors.png",
-            "/images/projects/learnify-tutor-details.png",
-            "/images/projects/learnify-dashboard.png"
+            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Hero",
+            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Find+Tutors",
+            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Tutor+Details",
+            "https://placehold.co/1200x800/0f172a/22d3ee?text=Learnify+Dashboard"
         ]
     },
     {
@@ -99,7 +99,7 @@ export const projects = [
         "slug": "employee-management-system",
         "title": "Employee Management System — Role-Based HR & Payroll Platform",
         "description": "A production-style employee management platform with role-based dashboards (Admin, HR, Employee), secure authentication, payroll workflows, task tracking, and responsive UI with dark mode support.",
-        "image": "/images/projects/employee-dashboard.png",
+        "image": "https://placehold.co/1200x800/0c1222/818cf8?text=Employee+Management+System",
         "tech": [
             "React",
             "React Router",
@@ -117,8 +117,8 @@ export const projects = [
             "Vercel"
         ],
         "category": "Full-Stack",
-        "liveLink": "https://your-employee-management-live-link.com",
-        "githubLink": "https://github.com/your-username/employee-management-client",
+        "liveLink": "https://employee-management-4bde3.web.app",
+        "githubLink": "https://github.com/muntasir-mahmud-abdullah/employee-management-client",
         "featured": true,
         "challenge": "Designing a real-world HR system with strict role separation, secure payroll actions, disabled-account enforcement, and a professional dashboard UX that scales across devices and supports dark mode.",
         "solution": "Implemented Firebase authentication with JWT-protected APIs and role-based route guards to ensure secure access control. Built separate dashboards for Admin, HR, and Employees with tailored permissions. Added payroll workflows with verification, payment history, and duplicate-prevention logic. Designed a responsive, dark-mode-compatible UI using Tailwind and DaisyUI, enhanced with alerts and toasts for professional UX feedback.",
@@ -134,34 +134,11 @@ export const projects = [
         "timeline": "Dec 2024 – Feb 2025 (iterative feature-driven development)",
         "keyOutcome": "A recruiter-ready, production-style HR & payroll system demonstrating real-world authorization logic, clean dashboard UX, and scalable frontend architecture suitable for professional frontend roles.",
         "screenshots": [
-            "/images/projects/employee-dashboard.png",
-            "/images/projects/admin-dashboard.png",
-            "/images/projects/hr-dashboard.png"
+            "https://placehold.co/1200x800/0c1222/818cf8?text=Employee+Dashboard",
+            "https://placehold.co/1200x800/0c1222/818cf8?text=Admin+Dashboard",
+            "https://placehold.co/1200x800/0c1222/818cf8?text=HR+Dashboard"
         ]
     },
-    {
-        id: 4,
-        slug: 'portfolio-website',
-        title: 'Personal Portfolio',
-        description: 'Modern, responsive portfolio website built with Next.js, showcasing projects and technical skills.',
-        image: '/images/projects/portfolio.png',
-        tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'DaisyUI'],
-        category: 'Frontend',
-        // liveLink: 'https://yoursite.com', // Optional: Commented out to hide button
-        // githubLink: 'https://github.com/muntasir-mahmud-abdullah', // Optional: Commented out to hide button
-        featured: false,
-        challenge: 'Designing a unique and performant portfolio that effectively showcases skills and projects while maintaining high accessibility standards.',
-        solution: 'Built with Next.js for SSR and SEO benefits. Used Tailwind CSS for rapid styling and Framer Motion for engaging animations. The design focuses on user experience and content hierarchy.',
-        keyFeatures: [
-            'Server-side rendering for optimal performance',
-            'Custom animations and interactive elements',
-            'Fully responsive design across all devices',
-            'Optimized for SEO and accessibility'
-        ],
-        role: 'Designer & Developer',
-        timeline: '3 Weeks',
-        keyOutcome: 'Achieved a perfect 100 Lighthouse score for performance and accessibility.',
-    }
 ];
 
 export function getAllProjects() {
